@@ -1,0 +1,1569 @@
+<!doctype html>
+<html lang="lo">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ເພັດຊະລາດ ໂອທີ — Phetsarath OT v4.103</title>
+    <meta
+      name="description"
+      content="ຟອນລາວທາງການ ປັບປຸງໃໝ່: ໑໒ ນ້ຳໜັກ, ຕັດຄຳຖືກຕ້ອງໃນ Microsoft Office, ຮອງຮັບ Windows, macOS ແລະ iOS — The official Lao font, rebuilt."
+    />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://phetsarath.mts.la/" />
+    <meta property="og:title" content="Phetsarath OT v4.103 — ຟອນລາວທາງການ" />
+    <meta
+      property="og:description"
+      content="12 styles, correct Lao word wrapping in Office, Pali letters, free download for Windows / macOS / iOS."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://phetsarath.mts.la/" />
+    <meta property="og:image" content="https://phetsarath.mts.la/img/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="lo_LA" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Phetsarath OT v4.103 — ຟອນລາວທາງການ" />
+    <meta name="twitter:image" content="https://phetsarath.mts.la/img/og.png" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Phetsarath OT",
+        "softwareVersion": "4.103",
+        "applicationCategory": "DesignApplication",
+        "operatingSystem": "Windows, macOS, iOS, Web",
+        "url": "https://phetsarath.mts.la/",
+        "downloadUrl": "downloads/PhetsarathOT-v4.103.zip",
+        "image": "https://phetsarath.mts.la/img/og.png",
+        "description": "The official Lao font, rebuilt: 12 weights with italics, correct Lao word wrapping in Microsoft Office, Pali/Sanskrit letters, free under the SIL Open Font License.",
+        "license": "https://openfontlicense.org",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "inLanguage": "lo"
+      }
+    </script>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%230A2451'/%3E%3Ctext x='50' y='72' font-size='62' text-anchor='middle' fill='%23fff' font-family='serif'%3E%E0%BA%81%3C/text%3E%3C/svg%3E"
+    />
+    <style>
+      @font-face {
+        font-family: "Phetsarath OT";
+        font-weight: 300;
+        font-style: normal;
+        src: url(fonts/PhetsarathOT-Light.woff2?v=4103) format("woff2");
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Phetsarath OT";
+        font-weight: 300;
+        font-style: italic;
+        src: url(fonts/PhetsarathOT-LightItalic.woff2?v=4103) format("woff2");
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Phetsarath OT";
+        font-weight: 400;
+        font-style: normal;
+        src: url(fonts/PhetsarathOT-Regular.woff2?v=4103) format("woff2");
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Phetsarath OT";
+        font-weight: 400;
+        font-style: italic;
+        src: url(fonts/PhetsarathOT-Italic.woff2?v=4103) format("woff2");
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Phetsarath OT";
+        font-weight: 500;
+        font-style: normal;
+        src: url(fonts/PhetsarathOT-Medium.woff2?v=4103) format("woff2");
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Phetsarath OT";
+        font-weight: 500;
+        font-style: italic;
+        src: url(fonts/PhetsarathOT-MediumItalic.woff2?v=4103) format("woff2");
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Phetsarath OT";
+        font-weight: 600;
+        font-style: normal;
+        src: url(fonts/PhetsarathOT-SemiBold.woff2?v=4103) format("woff2");
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Phetsarath OT";
+        font-weight: 600;
+        font-style: italic;
+        src: url(fonts/PhetsarathOT-SemiBoldItalic.woff2?v=4103) format("woff2");
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Phetsarath OT";
+        font-weight: 700;
+        font-style: normal;
+        src: url(fonts/PhetsarathOT-Bold.woff2?v=4103) format("woff2");
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Phetsarath OT";
+        font-weight: 700;
+        font-style: italic;
+        src: url(fonts/PhetsarathOT-BoldItalic.woff2?v=4103) format("woff2");
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Phetsarath OT";
+        font-weight: 900;
+        font-style: normal;
+        src: url(fonts/PhetsarathOT-Black.woff2?v=4103) format("woff2");
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Phetsarath OT";
+        font-weight: 900;
+        font-style: italic;
+        src: url(fonts/PhetsarathOT-BlackItalic.woff2?v=4103) format("woff2");
+        font-display: swap;
+      }
+
+      :root {
+        --navy: #0a2451;
+        --navy-deep: #071a3c;
+        --red: #be2338;
+        --red-soft: #d94a5c;
+        --paper: #f8f7f3;
+        --card: #ffffff;
+        --ink: #1c2333;
+        --muted: #5c6474;
+        --line: #e4e2da;
+        --on-navy: #f2f4f9;
+        --on-navy-muted: #9da9c4;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background: var(--paper);
+        color: var(--ink);
+        font-family:
+          "Phetsarath OT",
+          "Segoe UI",
+          system-ui,
+          -apple-system,
+          sans-serif;
+        line-height: 1.95;
+        font-size: 17px;
+      }
+      .wrap {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+      .en {
+        font-family:
+          "Segoe UI",
+          system-ui,
+          -apple-system,
+          "Phetsarath OT",
+          sans-serif;
+      }
+
+      /* ---------- hero ---------- */
+      header.hero {
+        background: linear-gradient(
+          168deg,
+          var(--navy) 0%,
+          var(--navy-deep) 100%
+        );
+        color: var(--on-navy);
+        padding: 64px 0 0;
+        overflow: hidden;
+      }
+      .eyebrow {
+        font-size: 13px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--red-soft);
+        font-weight: 600;
+        font-family: "Segoe UI", system-ui, "Phetsarath OT", sans-serif;
+      }
+      .hero h1 {
+        font-weight: 400;
+        font-size: clamp(52px, 9vw, 110px);
+        line-height: 1.55;
+        margin-top: 6px;
+        text-wrap: balance;
+      }
+      .hero .latin-name {
+        font-family: "Segoe UI", system-ui, "Phetsarath OT", sans-serif;
+        font-size: clamp(17px, 2.4vw, 22px);
+        color: var(--on-navy-muted);
+        font-weight: 600;
+      }
+      .hero p.lede {
+        max-width: 34em;
+        margin-top: 18px;
+        font-size: 19px;
+      }
+      .hero p.lede-en {
+        max-width: 60ch;
+        margin-top: 6px;
+        font-size: 14.5px;
+        color: var(--on-navy-muted);
+        line-height: 1.7;
+      }
+      .cta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin: 34px 0 0;
+      }
+      .btn {
+        display: inline-block;
+        padding: 13px 28px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 17px;
+        line-height: 1.6;
+        transition:
+          transform 0.12s,
+          box-shadow 0.12s;
+      }
+      .btn:focus-visible {
+        outline: 3px solid var(--red-soft);
+        outline-offset: 3px;
+      }
+      .btn-primary {
+        background: var(--red);
+        color: #fff;
+        box-shadow: 0 6px 22px rgba(190, 35, 56, 0.35);
+      }
+      .btn-primary:hover {
+        transform: translateY(-2px);
+      }
+      .btn-ghost {
+        border: 1.5px solid rgba(242, 244, 249, 0.35);
+        color: var(--on-navy);
+      }
+      .btn-ghost:hover {
+        border-color: rgba(242, 244, 249, 0.7);
+      }
+      .hero .strip {
+        margin-top: 56px;
+        padding: 20px 0 26px;
+        border-top: 1px solid rgba(242, 244, 249, 0.14);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px 34px;
+        font-size: 27px;
+        color: var(--on-navy);
+      }
+      .hero .strip span {
+        opacity: 0.92;
+      }
+      .version-chip {
+        display: inline-block;
+        margin-left: 14px;
+        padding: 2px 12px;
+        border-radius: 99px;
+        background: rgba(190, 35, 56, 0.25);
+        border: 1px solid var(--red-soft);
+        font-size: 13px;
+        font-family: "Segoe UI", system-ui, "Phetsarath OT", sans-serif;
+        vertical-align: middle;
+      }
+
+      /* ---------- sections ---------- */
+      section {
+        padding: 76px 0 8px;
+      }
+      .sec-head h2 {
+        font-size: clamp(28px, 4vw, 38px);
+        font-weight: 700;
+        line-height: 1.7;
+        text-wrap: balance;
+      }
+      .sec-head .sub {
+        font-family: "Segoe UI", system-ui, "Phetsarath OT", sans-serif;
+        color: var(--muted);
+        font-size: 15px;
+        margin-top: 2px;
+      }
+      .rule {
+        border: 0;
+        border-top: 3px solid var(--red);
+        width: 64px;
+        margin: 0 0 16px;
+      }
+
+      /* problems / solutions */
+      .fix-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 18px;
+        margin-top: 34px;
+      }
+      .fix {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 24px 26px 20px;
+      }
+      .fix .old {
+        color: var(--muted);
+        font-size: 15.5px;
+        line-height: 1.8;
+      }
+      .fix .old::before {
+        content: "✕ ";
+        color: var(--red);
+        font-weight: 700;
+      }
+      .fix h3 {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1.8;
+        margin-bottom: 8px;
+      }
+      .fix .new {
+        margin-top: 10px;
+        font-size: 15.5px;
+        line-height: 1.8;
+      }
+      .fix .new::before {
+        content: "✓ ";
+        color: #1d7a46;
+        font-weight: 700;
+      }
+      .fix .en-note {
+        font-family: "Segoe UI", system-ui, "Phetsarath OT", sans-serif;
+        color: var(--muted);
+        font-size: 12.5px;
+        margin-top: 12px;
+        line-height: 1.6;
+        border-top: 1px dashed var(--line);
+        padding-top: 10px;
+      }
+
+      /* weights ladder */
+      .wrow {
+        display: grid;
+        grid-template-columns: 180px 1fr;
+        gap: 16px;
+        align-items: baseline;
+        padding: 10px 0;
+        border-bottom: 1px solid var(--line);
+      }
+      .wrow:last-child {
+        border-bottom: 0;
+      }
+      .wlabel {
+        font-family: "Segoe UI", system-ui, "Phetsarath OT", sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+      }
+      .wlabel small {
+        color: var(--muted);
+        font-weight: 400;
+        margin-left: 8px;
+      }
+      .wsample {
+        font-size: 27px;
+        line-height: 2.05;
+        white-space: nowrap;
+        overflow-x: auto;
+        scrollbar-width: none;
+      }
+
+      /* playground */
+      .playground {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 14px 20px 22px;
+        margin-top: 30px;
+        box-shadow: 0 10px 40px rgba(10, 36, 81, 0.06);
+      }
+      .pg-bar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        align-items: center;
+        padding: 10px 0 16px;
+        font-family: "Segoe UI", system-ui, "Phetsarath OT", sans-serif;
+      }
+      .pg-bar button {
+        font-family: inherit;
+        font-size: 13px;
+        padding: 6px 14px;
+        border-radius: 99px;
+        border: 1px solid var(--line);
+        background: transparent;
+        color: var(--ink);
+        cursor: pointer;
+      }
+      .pg-bar button[aria-pressed="true"] {
+        background: var(--navy);
+        border-color: var(--navy);
+        color: #fff;
+      }
+      .pg-bar button:focus-visible {
+        outline: 2px solid var(--red);
+        outline-offset: 2px;
+      }
+      .pg-bar .sep {
+        width: 1px;
+        height: 22px;
+        background: var(--line);
+        margin: 0 4px;
+      }
+      .pg-bar label {
+        font-size: 13px;
+        color: var(--muted);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .pg-bar input[type="range"] {
+        accent-color: var(--red);
+      }
+      .pg-area {
+        font-size: 34px;
+        line-height: 2.1;
+        min-height: 110px;
+        outline: none;
+        border-radius: 8px;
+        padding: 6px 8px;
+      }
+      .pg-area:focus-visible {
+        box-shadow: 0 0 0 2px var(--red);
+      }
+      .pg-samples {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding-top: 14px;
+        border-top: 1px dashed var(--line);
+        font-family: "Segoe UI", system-ui, "Phetsarath OT", sans-serif;
+      }
+      .pg-samples button {
+        font-family: "Phetsarath OT", sans-serif;
+        font-size: 14px;
+        padding: 5px 12px;
+        border-radius: 8px;
+        border: 1px solid var(--line);
+        background: var(--paper);
+        cursor: pointer;
+        line-height: 1.9;
+      }
+
+      /* wrap demo */
+      .wrapbox {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 20px 26px;
+        font-size: 18.5px;
+        line-height: 2.2;
+        resize: horizontal;
+        overflow: auto;
+        min-width: 250px;
+        max-width: 100%;
+        width: min(660px, 100%);
+        margin-top: 28px;
+      }
+      .hint {
+        font-family: "Segoe UI", system-ui, "Phetsarath OT", sans-serif;
+        font-size: 12.5px;
+        color: var(--muted);
+        margin-top: 10px;
+      }
+
+      /* downloads */
+      #download {
+        background: var(--navy);
+        color: var(--on-navy);
+        margin-top: 72px;
+        padding: 72px 0 56px;
+      }
+      #download .sec-head h2 {
+        color: #fff;
+      }
+      #download .sec-head .sub {
+        color: var(--on-navy-muted);
+      }
+      .dl-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+        gap: 18px;
+        margin-top: 36px;
+      }
+      .dl {
+        background: rgba(242, 244, 249, 0.05);
+        border: 1px solid rgba(242, 244, 249, 0.16);
+        border-radius: 12px;
+        padding: 24px 24px 20px;
+        display: flex;
+        flex-direction: column;
+      }
+      .dl h3 {
+        font-family: "Segoe UI", system-ui, "Phetsarath OT", sans-serif;
+        font-size: 17px;
+        font-weight: 700;
+        color: #fff;
+      }
+      .dl .size {
+        font-family: "Segoe UI", system-ui, "Phetsarath OT", sans-serif;
+        font-size: 12px;
+        color: var(--on-navy-muted);
+        margin-top: 2px;
+      }
+      .dl ol {
+        margin: 14px 0 18px;
+        padding-left: 20px;
+        font-size: 14.5px;
+        line-height: 1.9;
+        color: var(--on-navy);
+      }
+      .dl ol.en {
+        font-size: 13px;
+        line-height: 1.75;
+        color: var(--on-navy-muted);
+      }
+      .dl .btn {
+        margin-top: auto;
+        text-align: center;
+        background: var(--red);
+        color: #fff;
+        font-size: 15px;
+        padding: 11px 18px;
+      }
+      .dl .btn.secondary {
+        background: transparent;
+        border: 1.5px solid rgba(242, 244, 249, 0.35);
+      }
+      .dl .note {
+        font-family: "Segoe UI", system-ui, "Phetsarath OT", sans-serif;
+        font-size: 12.5px;
+        color: var(--on-navy-muted);
+        line-height: 1.7;
+        margin: 10px 0 16px;
+      }
+      .webcss {
+        background: rgba(0, 0, 0, 0.35);
+        border-radius: 10px;
+        padding: 16px 18px;
+        font-family: Consolas, "Cascadia Mono", monospace;
+        font-size: 12.5px;
+        line-height: 1.7;
+        color: #c8d3ea;
+        overflow-x: auto;
+        white-space: pre;
+        margin: 14px 0 18px;
+      }
+      .addin-banner {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 22px;
+        padding: 20px 24px;
+        border-radius: 12px;
+        text-decoration: none;
+        background: linear-gradient(
+          120deg,
+          rgba(190, 35, 56, 0.28),
+          rgba(190, 35, 56, 0.1)
+        );
+        border: 1.5px solid var(--red-soft);
+      }
+      .addin-banner img {
+        border-radius: 12px;
+        flex-shrink: 0;
+      }
+      .addin-txt {
+        flex: 1 1 320px;
+      }
+      .addin-title {
+        display: block;
+        font-family: "Phetsarath OT", "Segoe UI", sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        color: #fff;
+      }
+      .addin-badge {
+        display: inline-block;
+        background: var(--red);
+        color: #fff;
+        font-family: "Segoe UI", system-ui, sans-serif;
+        font-size: 10.5px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        border-radius: 99px;
+        padding: 2px 9px;
+        vertical-align: 3px;
+        margin-left: 6px;
+      }
+      .addin-sub {
+        display: block;
+        font-size: 13.5px;
+        color: var(--on-navy);
+        line-height: 1.7;
+        margin-top: 4px;
+      }
+      .addin-sub.en {
+        font-family: "Segoe UI", system-ui, sans-serif;
+        font-size: 12px;
+        color: var(--on-navy-muted);
+      }
+      .addin-cta {
+        background: var(--red);
+        color: #fff;
+        font-size: 15px;
+        padding: 11px 22px;
+        flex-shrink: 0;
+      }
+
+      /* ai section */
+      #ai {
+        padding: 72px 0 12px;
+      }
+      .ai-intro {
+        max-width: 62em;
+        font-size: 16.5px;
+        margin-top: 22px;
+      }
+      .ai-intro.en {
+        font-size: 13.5px;
+        color: var(--muted);
+        line-height: 1.7;
+        margin-top: 6px;
+        max-width: 70ch;
+      }
+      .ai-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 18px;
+        margin-top: 30px;
+      }
+      .ai-card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 24px 26px 22px;
+        display: flex;
+        flex-direction: column;
+      }
+      .ai-card h3 {
+        font-family: "Segoe UI", system-ui, "Phetsarath OT", sans-serif;
+        font-size: 16.5px;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+      .ai-card p {
+        font-size: 15px;
+        line-height: 1.9;
+      }
+      .ai-card .en-sub {
+        font-family: "Segoe UI", system-ui, "Phetsarath OT", sans-serif;
+        font-size: 12.5px;
+        color: var(--muted);
+        line-height: 1.7;
+        margin: 10px 0 16px;
+        border-top: 1px dashed var(--line);
+        padding-top: 10px;
+      }
+      .ai-card code {
+        font-family: Consolas, "Cascadia Mono", monospace;
+        font-size: 0.85em;
+        background: var(--paper);
+        padding: 1px 5px;
+        border-radius: 3px;
+      }
+      .ai-btn {
+        margin-top: auto;
+        text-align: center;
+        background: var(--navy);
+        color: #fff;
+        font-size: 15px;
+        padding: 11px 18px;
+      }
+      .ai-url {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        margin: 12px 0 2px;
+      }
+      .ai-url code {
+        flex: 1;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding: 8px 10px;
+      }
+      .ai-url button {
+        font-family: "Segoe UI", system-ui, "Phetsarath OT", sans-serif;
+        font-size: 12.5px;
+        padding: 7px 12px;
+        border-radius: 8px;
+        border: 1px solid var(--line);
+        background: var(--paper);
+        cursor: pointer;
+        white-space: nowrap;
+      }
+      .ai-url button:focus-visible {
+        outline: 2px solid var(--red);
+        outline-offset: 2px;
+      }
+
+      /* support */
+      #support {
+        padding: 72px 0 84px;
+      }
+      .support-card {
+        max-width: 420px;
+        margin: 32px auto 0;
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 28px 28px 22px;
+        text-align: center;
+        box-shadow: 0 12px 44px rgba(10, 36, 81, 0.08);
+      }
+      .support-card img {
+        width: 100%;
+        max-width: 300px;
+        border-radius: 10px;
+        display: block;
+        margin: 0 auto;
+      }
+      .support-note {
+        font-size: 15px;
+        line-height: 1.9;
+        margin-top: 18px;
+        text-align: left;
+      }
+      .support-note.en {
+        font-family: "Segoe UI", system-ui, "Phetsarath OT", sans-serif;
+        font-size: 12.5px;
+        color: var(--muted);
+        line-height: 1.7;
+        margin-top: 10px;
+      }
+
+      /* footer */
+      footer {
+        background: var(--navy-deep);
+        color: var(--on-navy-muted);
+        padding: 40px 0 48px;
+        font-family: "Segoe UI", system-ui, "Phetsarath OT", sans-serif;
+        font-size: 13px;
+        line-height: 1.9;
+      }
+      footer a {
+        color: var(--on-navy);
+      }
+      footer .lao {
+        font-family: "Phetsarath OT", sans-serif;
+        font-size: 15px;
+        color: var(--on-navy);
+      }
+
+      @media (max-width: 640px) {
+        .wrow {
+          grid-template-columns: 1fr;
+          gap: 0;
+        }
+        .hero h1 {
+          line-height: 1.5;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        .btn {
+          transition: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="wrap">
+        <p class="eyebrow">
+          ຟອນທາງການ ສປປ ລາວ · Official Lao Font
+          <span class="version-chip">v4.103</span>
+        </p>
+        <h1>ເພັດຊະລາດ ໂອທີ</h1>
+        <p class="latin-name">
+          Phetsarath OT — the official Lao font, rebuilt.
+        </p>
+        <p class="lede">
+          ຟອນລາວທາງການ ສະບັບປັບປຸງໃໝ່: ໑໒ ນ້ຳໜັກ, ຕັດຄຳຂຶ້ນແຖວໃໝ່ຖືກຕ້ອງໃນ
+          Microsoft Office, ວາງສະຫຼະ-ວັນນະຍຸດຄົບຖ້ວນທຸກນ້ຳໜັກ ແລະ
+          ຮອງຮັບຕົວອັກສອນບາລີ-ສັນສະກຣິດ.
+        </p>
+        <p class="lede-en en">
+          12 weights with true italics · correct Lao word wrapping in Word,
+          Excel &amp; PowerPoint · collision-free mark stacking ·
+          Pali/Sanskrit/Kmhmu letters · Windows, macOS, iOS &amp; web. Free
+          under the SIL Open Font License.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#download">ດາວໂຫລດຟອນ ↓</a>
+          <a class="btn btn-ghost" href="#playground">ທົດລອງພິມ</a>
+          <a class="btn btn-ghost" href="#ai">🤖 ຄູ່ມື AI</a>
+          <a class="btn btn-ghost" href="#faq">❓ ຄຳຖາມ-ຄຳຕອບ</a>
+          <a class="btn btn-ghost" href="#support">☕ ສະໜັບສະໜູນ</a>
+        </div>
+        <div class="strip" aria-hidden="true">
+          <span style="font-weight: 300">ພະຍັນຊະນະ</span>
+          <span style="font-weight: 400">ພະຍັນຊະນະ</span>
+          <span style="font-weight: 500">ພະຍັນຊະນະ</span>
+          <span style="font-weight: 600">ພະຍັນຊະນະ</span>
+          <span style="font-weight: 700">ພະຍັນຊະນະ</span>
+          <span style="font-weight: 900">ພະຍັນຊະນະ</span>
+        </div>
+      </div>
+    </header>
+
+    <section id="fixes">
+      <div class="wrap">
+        <div class="sec-head">
+          <hr class="rule" />
+          <h2>ບັນຫາເກົ່າ ແລະ ສິ່ງທີ່ສະບັບນີ້ແກ້ໄຂ</h2>
+          <p class="sub en">What was broken before — and what v4.103 fixes</p>
+        </div>
+        <div class="fix-grid">
+          <div class="fix">
+            <h3>ນ້ຳໜັກຕົວອັກສອນ</h3>
+            <p class="old">
+              ສະບັບເກົ່າມີພຽງນ້ຳໜັກດຽວ — ກົດປຸ່ມ <b>B</b> ຫຼື <i>I</i> ໃນ Word
+              ແລ້ວໂປຣແກຣມຕ້ອງປອມຕົວໜາເອງ ເຮັດໃຫ້ຕົວອັກສອນເປື້ອນ
+            </p>
+            <p class="new">
+              ໑໒ ຟອນແທ້: Light ຫາ Black ພ້ອມຕົວອຽງ ໑໒° ທຸກນ້ຳໜັກ — ປຸ່ມ B / I ໃນ
+              Office ເອີ້ນໃຊ້ຟອນແທ້ອັດຕະໂນມັດ
+            </p>
+            <p class="en-note">
+              v2.00 had one style only; Word had to synthesize bold/italic. v4
+              ships 12 real style-linked fonts.
+            </p>
+          </div>
+          <div class="fix">
+            <h3>ການຕັດຄຳຂຶ້ນແຖວໃໝ່</h3>
+            <p class="old">
+              ຂໍ້ມູນພາຍໃນຟອນເສຍຫາຍ (ອ້າງວ່າຮອງຮັບທຸກພາສາໃນໂລກ)
+              ເຮັດໃຫ້ບາງໂປຣແກຣມຕັດແຖວພາສາລາວຜິດພາດ
+            </p>
+            <p class="new">
+              ແກ້ໄຂຕາມສູດຂອງຟອນ Saysettha (LaoScript) ແລະ
+              ພິສູດແລ້ວດ້ວຍການທົດສອບຈິງໃນ Word, Excel ແລະ PowerPoint —
+              ຕັດຄຳຖືກຂອບເຂດຄຳສະເໝີ
+            </p>
+            <p class="en-note">
+              v2's OS/2 tables claimed every codepage in existence, confusing
+              complex-script handling. v4 declares exactly Lao+Thai coverage —
+              verified empirically in Office.
+            </p>
+          </div>
+          <div class="fix">
+            <h3>ຕຳແໜ່ງສະຫຼະ-ວັນນະຍຸດ</h3>
+            <p class="old">
+              ໃນບາງໂປຣແກຣມ ວັນນະຍຸດລອຍຜິດບ່ອນ ຫຼື ຊ້ອນທັບສະຫຼະ
+              ເພາະຟອນເກົ່າບໍ່ໄດ້ລົງທະບຽນກົດຕຳແໜ່ງແບບ DFLT
+            </p>
+            <p class="new">
+              ກວດສອບຄົບ ໑,໒໐໔ ຊຸດປະສົມ (ພະຍັນຊະນະ×ສະຫຼະ×ວັນນະຍຸດ) ໃນທຸກນ້ຳໜັກ —
+              ບໍ່ມີການຊ້ອນທັບແມ່ນແຕ່ຈຸດດຽວ
+            </p>
+            <p class="en-note">
+              Added DFLT script registration (matching Saysettha) and
+              weight-aware mark lifting; 1,204 combos × 12 fonts verified
+              collision-free.
+            </p>
+          </div>
+          <div class="fix">
+            <h3>ຕົວອັກສອນບາລີ-ສັນສະກຣິດ</h3>
+            <p class="old">
+              ຂາດຕົວອັກສອນ ໑໔ ຕົວ ສຳລັບພາສາບາລີ, ສັນສະກຣິດ ແລະ ກຶມມຸ
+              ທີ່ເພີ່ມເຂົ້າ Unicode ປີ 2019
+            </p>
+            <p class="new">
+              ຄົບແລ້ວ: ຆ ຉ ຌ ຎ ຏ ຐ ຑ ຒ ຓ ຘ ຠ ຨ ຩ ຬ — ທຸກນ້ຳໜັກ
+              ພ້ອມການວາງວັນນະຍຸດຖືກຕ້ອງ
+            </p>
+            <p class="en-note">
+              All 14 Unicode-12 letters (U+0E86–U+0EAC), adapted from Noto Sans
+              Lao Looped (OFL) and harmonized to Phetsarath's stroke weight.
+            </p>
+          </div>
+          <div class="fix">
+            <h3>ຄວາມເຂົ້າກັນໄດ້</h3>
+            <p class="old">
+              ຊື່ PostScript ຜິດມາດຕະຖານ (ມີວົງເລັບ ແລະ ຍະຫວ່າງ)
+              ອາດເຮັດໃຫ້ການສົ່ງອອກ PDF ຜິດພາດ; ຈຳກັດການຝັງຟອນ
+            </p>
+            <p class="new">
+              ຂໍ້ມູນຟອນສະອາດຕາມມາດຕະຖານ, ຝັງໄດ້ເສລີ (fsType 0), ໃຊ້ໄດ້ທັງ
+              Windows, macOS, iOS ແລະ ເວັບ — ຊຸດດຽວກັນ
+            </p>
+            <p class="en-note">
+              Legal PostScript names, unrestricted embedding, version 4.103
+              supersedes both the old Windows copy and the Souliyo Mac v3 fonts.
+            </p>
+          </div>
+          <div class="fix">
+            <h3>ໂຄງຮ່າງເດີມ ຄົງໄວ້ ໑໐໐%</h3>
+            <p class="old">
+              ຄວາມສ່ຽງຂອງການປັບປຸງຟອນທາງການ: ຮູບຮ່າງຕົວອັກສອນປ່ຽນ ຫຼື
+              ເອກະສານເກົ່າຈັດໜ້າຄືນໃໝ່
+            </p>
+            <p class="new">
+              ນ້ຳໜັກປົກກະຕິ (Regular) ໃຊ້ເສັ້ນຂອບ ແລະ hinting ເດີມຂອງສະບັບທາງການ
+              2012 ບໍ່ປ່ຽນແປງ — ເອກະສານເກົ່າຄົງໜ້າຕາເດີມທຸກປະການ
+            </p>
+            <p class="en-note">
+              Regular keeps the official v2.00 outlines and vertical metrics
+              untouched — existing documents don't reflow.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="weights">
+      <div class="wrap">
+        <div class="sec-head">
+          <hr class="rule" />
+          <h2>໑໒ ນ້ຳໜັກ</h2>
+          <p class="sub en">
+            Twelve styles — six weights, each with a true 12° italic
+          </p>
+        </div>
+        <div style="margin-top: 26px">
+          <div class="wrow">
+            <div class="wlabel">Light <small>300</small></div>
+            <div class="wsample" style="font-weight: 300">
+              ສະບາຍດີ ນະຄອນຫຼວງວຽງຈັນ 0123456789
+            </div>
+          </div>
+          <div class="wrow">
+            <div class="wlabel">Light Italic</div>
+            <div class="wsample" style="font-weight: 300; font-style: italic">
+              ສະບາຍດີ ນະຄອນຫຼວງວຽງຈັນ 0123456789
+            </div>
+          </div>
+          <div class="wrow">
+            <div class="wlabel">Regular <small>400</small></div>
+            <div class="wsample">ສະບາຍດີ ນະຄອນຫຼວງວຽງຈັນ 0123456789</div>
+          </div>
+          <div class="wrow">
+            <div class="wlabel">Italic</div>
+            <div class="wsample" style="font-style: italic">
+              ສະບາຍດີ ນະຄອນຫຼວງວຽງຈັນ 0123456789
+            </div>
+          </div>
+          <div class="wrow">
+            <div class="wlabel">Medium <small>500</small></div>
+            <div class="wsample" style="font-weight: 500">
+              ສະບາຍດີ ນະຄອນຫຼວງວຽງຈັນ 0123456789
+            </div>
+          </div>
+          <div class="wrow">
+            <div class="wlabel">Medium Italic</div>
+            <div class="wsample" style="font-weight: 500; font-style: italic">
+              ສະບາຍດີ ນະຄອນຫຼວງວຽງຈັນ 0123456789
+            </div>
+          </div>
+          <div class="wrow">
+            <div class="wlabel">SemiBold <small>600</small></div>
+            <div class="wsample" style="font-weight: 600">
+              ສະບາຍດີ ນະຄອນຫຼວງວຽງຈັນ 0123456789
+            </div>
+          </div>
+          <div class="wrow">
+            <div class="wlabel">SemiBold Italic</div>
+            <div class="wsample" style="font-weight: 600; font-style: italic">
+              ສະບາຍດີ ນະຄອນຫຼວງວຽງຈັນ 0123456789
+            </div>
+          </div>
+          <div class="wrow">
+            <div class="wlabel">Bold <small>700</small></div>
+            <div class="wsample" style="font-weight: 700">
+              ສະບາຍດີ ນະຄອນຫຼວງວຽງຈັນ 0123456789
+            </div>
+          </div>
+          <div class="wrow">
+            <div class="wlabel">Bold Italic</div>
+            <div class="wsample" style="font-weight: 700; font-style: italic">
+              ສະບາຍດີ ນະຄອນຫຼວງວຽງຈັນ 0123456789
+            </div>
+          </div>
+          <div class="wrow">
+            <div class="wlabel">Black <small>900</small></div>
+            <div class="wsample" style="font-weight: 900">
+              ສະບາຍດີ ນະຄອນຫຼວງວຽງຈັນ 0123456789
+            </div>
+          </div>
+          <div class="wrow">
+            <div class="wlabel">Black Italic</div>
+            <div class="wsample" style="font-weight: 900; font-style: italic">
+              ສະບາຍດີ ນະຄອນຫຼວງວຽງຈັນ 0123456789
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="playground">
+      <div class="wrap">
+        <div class="sec-head">
+          <hr class="rule" />
+          <h2>ທົດລອງພິມ</h2>
+          <p class="sub en">
+            Playground — type your own text, switch weights, drag the size
+          </p>
+        </div>
+        <div class="playground">
+          <div class="pg-bar" id="pgbar" role="group" aria-label="Font style">
+            <button data-w="300">Light</button>
+            <button data-w="400" aria-pressed="true">Regular</button>
+            <button data-w="500">Medium</button>
+            <button data-w="600">SemiBold</button>
+            <button data-w="700">Bold</button>
+            <button data-w="900">Black</button>
+            <span class="sep"></span>
+            <button data-i="1"><i>Italic</i></button>
+            <label style="margin-left: auto"
+              >ຂະໜາດ
+              <input type="range" id="pgsize" min="16" max="96" value="34" />
+              <span id="pgsizeval" style="min-width: 44px">34px</span></label
+            >
+          </div>
+          <div
+            class="pg-area"
+            id="pgarea"
+            contenteditable="true"
+            lang="lo"
+            spellcheck="false"
+          >
+            ອັກສອນລາວສວຍງາມສຳລັບທຸກຄົນ
+          </div>
+          <div class="pg-samples">
+            <button data-t="ອັກສອນລາວສວຍງາມສຳລັບທຸກຄົນ">ປະໂຫຍກທົ່ວໄປ</button>
+            <button data-t="ນ້ຳຄຳ ກໍ່ສ້າງ ເຄື່ອງໜັງສືພິມ ກ້ຳກຶ່ງ ຫຼວງພະບາງ">
+              ວັນນະຍຸດຊ້ອນ
+            </button>
+            <button data-t="ຆ ຉ ຌ ຎ ຏ ຐ ຑ ຒ ຓ ຘ ຠ ຨ ຩ ຬ">ບາລີ-ສັນສະກຣິດ</button>
+            <button
+              data-t="ກ ຂ ຄ ງ ຈ ສ ຊ ຍ ດ ຕ ຖ ທ ນ ບ ປ ຜ ຝ ພ ຟ ມ ຢ ຣ ລ ວ ຫ ອ ຮ ໜ ໝ"
+            >
+              ພະຍັນຊະນະ
+            </button>
+            <button data-t="໐ ໑ ໒ ໓ ໔ ໕ ໖ ໗ ໘ ໙ — 0 1 2 3 4 5 6 7 8 9">
+              ຕົວເລກ
+            </button>
+          </div>
+        </div>
+
+        <div class="wrapbox" lang="lo" tabindex="0">
+          ພາສາລາວຂຽນໂດຍບໍ່ມີການເວັ້ນວັກລະຫວ່າງຄຳ
+          ສະນັ້ນການຕັດຄຳຂຶ້ນແຖວໃໝ່ຈຶ່ງຕ້ອງອາໄສການວິເຄາະຂອບເຂດພະຍາງແລະຄຳຢ່າງຖືກຕ້ອງ
+          ເພື່ອບໍ່ໃຫ້ສະຫຼະແລະວັນນະຍຸດຖືກແຍກອອກຈາກພະຍັນຊະນະຕົ້ນຂອງມັນ
+          ລອງດຶງແຈເບື້ອງຂວາລຸ່ມຂອງກ່ອງນີ້ ເພື່ອເບິ່ງການຕັດຄຳແບບຖືກຕ້ອງ
+        </div>
+        <p class="hint">
+          ↘ ດຶງແຈກ່ອງເພື່ອປັບຂະໜາດ — ສັງເກດວ່າຄຳຖືກຕັດຢູ່ຂອບເຂດຄຳສະເໝີ · drag
+          the corner to resize and watch lines break at word boundaries
+        </p>
+      </div>
+    </section>
+
+    <section id="download">
+      <div class="wrap">
+        <div class="sec-head">
+          <hr class="rule" />
+          <h2>ດາວໂຫລດ ແລະ ຕິດຕັ້ງ</h2>
+          <p class="sub">
+            Download &amp; install — free for everyone under the SIL Open Font
+            License
+          </p>
+        </div>
+        <div class="dl-grid">
+          <div class="dl">
+            <h3>🪟 Windows</h3>
+            <p class="size">ZIP · TTF ×12 + ຄູ່ມື + ເອກະສານທົດສອບ</p>
+            <ol>
+              <li>ຖອນຟອນ Phetsarath ເກົ່າອອກກ່ອນ (Settings → Fonts)</li>
+              <li>ແຕກໄຟລ໌ ZIP, ເລືອກທັງ ໑໒ ໄຟລ໌</li>
+              <li>ຄລິກຂວາ → <b>Install for all users</b></li>
+              <li>ເປີດ Word ຄືນໃໝ່</li>
+            </ol>
+            <p class="note">
+              ⚠️ ໃຊ້ Word 2010/2013 ຢູ່ບໍ? ການຕັດຄຳອາດບໍ່ເຮັດວຽກ —
+              <a href="#faq" style="color: #fff">ອ່ານ FAQ ກ່ອນ</a>
+            </p>
+            <a
+              class="btn"
+              href="downloads/PhetsarathOT-v4.103.zip"
+              data-umami-event="download-font-zip"
+              download
+              >ດາວໂຫລດ ZIP</a
+            >
+          </div>
+          <div class="dl">
+            <h3>🍎 macOS</h3>
+            <p class="size">ZIP ດຽວກັນ — ໃຊ້ໄດ້ທັງສອງລະບົບ</p>
+            <ol>
+              <li>
+                ລຶບຟອນ Phetsarath ສະບັບເກົ່າ/ສະບັບ Mac v3 ໃນ Font Book ກ່ອນ
+              </li>
+              <li>ແຕກໄຟລ໌ ZIP</li>
+              <li>ເລືອກ TTF ທັງໝົດ → ເປີດດ້ວຍ Font Book → Install</li>
+            </ol>
+            <a
+              class="btn"
+              href="downloads/PhetsarathOT-v4.103.zip"
+              data-umami-event="download-font-zip"
+              download
+              >ດາວໂຫລດ ZIP</a
+            >
+          </div>
+          <div class="dl">
+            <h3>📱 iPhone / iPad</h3>
+            <p class="size">Configuration profile · ~2.6 MB</p>
+            <ol>
+              <li>ດາວໂຫລດ profile ດ້ວຍ Safari</li>
+              <li>Settings → <b>Profile Downloaded</b> → Install</li>
+              <li>ຟອນຈະໃຊ້ໄດ້ໃນ Pages, Keynote, ແອັບອື່ນໆ</li>
+            </ol>
+            <a
+              class="btn"
+              href="downloads/PhetsarathOT-v4.103-iOS.mobileconfig"
+              data-umami-event="download-ios-profile"
+              >ຕິດຕັ້ງໃສ່ iOS</a
+            >
+          </div>
+          <div class="dl">
+            <h3>🤖 Android</h3>
+            <p class="note">
+              Android ບໍ່ອະນຸຍາດໃຫ້ຕິດຕັ້ງຟອນລະບົບເອງ (ນອກຈາກ root) —
+              ແຕ່ແອັບທີ່ຮອງຮັບຟອນເອງ ເຊັ່ນ WPS Office ຫຼື ແອັບແຕ່ງຮູບ
+              ສາມາດໃຊ້ໄຟລ໌ TTF ຈາກ ZIP ໄດ້ · Android has no system-wide font
+              install without root; apps that support custom fonts can load the
+              TTFs directly.
+            </p>
+            <a
+              class="btn secondary"
+              href="downloads/PhetsarathOT-v4.103.zip"
+              data-umami-event="download-font-zip"
+              download
+              >ດາວໂຫລດ TTF</a
+            >
+          </div>
+        </div>
+
+        <div
+          class="addin-banner"
+          style="
+            border-color: rgba(242, 244, 249, 0.45);
+            background: rgba(242, 244, 249, 0.07);
+          "
+        >
+          <span class="addin-txt">
+            <span
+              class="addin-title"
+              style="font-family: Georgia, &quot;Times New Roman&quot;, serif"
+              >Phetsarath Serif <span class="addin-badge">NEW</span></span
+            >
+            <span class="addin-sub"
+              >ຟອນດຽວສຳລັບຈົດໝາຍທາງການ — ພາສາລາວເປັນ Phetsarath ສ່ວນພາສາອັງກິດ
+              ຕົວເລກ ແລະ ເຄື່ອງໝາຍ ສະແດງເປັນແບບ Times ໂດຍອັດຕະໂນມັດ
+              ບໍ່ຕ້ອງປ່ຽນຟອນເວລາສະຫຼັບພາສາ (v1.1:
+              ປັບຄວາມສູງຕົວອັງກິດໃຫ້ເທົ່າຕົວລາວແລ້ວ ຕາມຄຳຕິຊົມ)</span
+            >
+            <span
+              class="addin-sub en"
+              style="font-family: Georgia, &quot;Times New Roman&quot;, serif"
+              >One font for official Lao/English letters: Lao = Phetsarath,
+              English = Times-style, height-matched to the Lao letters (v1.1).
+              Regular · Bold · Italic · Bold Italic, style-linked.</span
+            >
+          </span>
+          <a
+            class="btn addin-cta"
+            href="downloads/PhetsarathSerif-v1.1.zip"
+            data-umami-event="download-serif-zip"
+            download
+            >ດາວໂຫລດ Serif ZIP v1.1</a
+          >
+        </div>
+
+        <a href="./addin/index.html" class="addin-banner">
+          <img src="addin/icon-80.png" alt="" width="56" height="56" />
+          <span class="addin-txt">
+            <span class="addin-title"
+              >ໃໝ່! Lao Text Fixer — Word Add-in
+              <span class="addin-badge">NEW</span></span
+            >
+            <span class="addin-sub"
+              >Word ບໍ່ຕັດຄຳລາວ? ຕິດຕັ້ງ Add-in ຟຣີຂອງພວກເຮົາ —
+              ກົດປຸ່ມດຽວແກ້ທັງເອກະສານ ໃຊ້ໄດ້ທັງ Windows, macOS ແລະ Word ໃນເວັບ
+              ບໍ່ແມ່ນມາໂຄຣ ບໍ່ມີຄຳເຕືອນຄວາມປອດໄພ</span
+            >
+            <span class="addin-sub en"
+              >One-click fix for Lao line wrapping in Word — Windows, macOS
+              &amp; Word on the web. Not a macro: no security warnings, source
+              fully readable.</span
+            >
+          </span>
+          <span class="btn addin-cta">ຕິດຕັ້ງ Add-in →</span>
+        </a>
+
+        <div style="margin-top: 34px">
+          <h3 class="en" style="font-size: 16px; color: #fff">
+            🌐 ນັກພັດທະນາເວັບ · Web developers
+          </h3>
+          <p class="note">
+            ຊຸດ webfont ພ້ອມໃຊ້: WOFF2 ທັງ ໑໒ ນ້ຳໜັກ + stylesheet ສຳເລັດຮູບ —
+            ແຕກ ZIP ໃສ່ໂປຣເຈັກຂອງທ່ານ ແລ້ວລິ້ງ CSS ດຽວ · Ready-made webfont kit:
+            12 WOFF2 files + stylesheet + demo page. Unzip into your project and
+            link one CSS file:
+          </p>
+          <div class="webcss">
+            &lt;link rel="stylesheet" href="phetsarath.css"&gt; &lt;style&gt;
+            body { font-family: 'Phetsarath OT', sans-serif; } h1 { font-weight:
+            900; } /* 300 | 400 | 500 | 600 | 700 | 900 + italics */
+            &lt;/style&gt;
+          </div>
+          <p class="note en">
+            Or hotlink directly from this site:
+            <code
+              >&lt;link rel="stylesheet"
+              href="https://phetsarath.mts.la/fonts/phetsarath.css"&gt;</code
+            >
+            (fonts are served with CORS enabled). Also available:
+            <a
+              href="downloads/PhetsarathOT-v4-test.docx"
+              data-umami-event="download-test-docx"
+              >Word test document</a
+            >
+          </p>
+          <p style="margin-top: 10px">
+            <a
+              class="btn"
+              style="
+                background: var(--red);
+                color: #fff;
+                font-size: 15px;
+                padding: 11px 22px;
+              "
+              href="downloads/PhetsarathOT-v4.103-webfont.zip"
+              data-umami-event="download-webfont-kit"
+              download
+              >ດາວໂຫລດຊຸດ Webfont (658 KB)</a
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="ai">
+      <div class="wrap">
+        <div class="sec-head">
+          <hr class="rule" />
+          <h2>🤖 ຄູ່ມືສຳລັບ AI</h2>
+          <p class="sub en">Teach your AI to write Lao correctly</p>
+        </div>
+        <p class="ai-intro">
+          AI ສ່ວນຫຼາຍ (Claude, ChatGPT, Codex, Cursor) ສ້າງເອກະສານ Word
+          ພາສາລາວແບບ<b>ຕັດຄຳຜິດ</b> ເພາະບໍ່ຮູ້ຈັກກົດ complex-script ຂອງ Word —
+          ພວກເຮົາຈຶ່ງກຽມຄູ່ມືສອນ AI ໄວ້ໃຫ້ ເລືອກຕາມເຄື່ອງມືທີ່ທ່ານໃຊ້:
+        </p>
+        <p class="ai-intro en">
+          Most AI assistants generate Lao Word documents with broken line
+          wrapping (splitting words like ອັກ|ສອນ) because they don't know Word's
+          complex-script rules. These files teach them — pick the one matching
+          your tool:
+        </p>
+        <div class="ai-grid">
+          <div class="ai-card">
+            <h3>Claude Code</h3>
+            <p>
+              ດາວໂຫລດ skill ແລ້ວແຕກໄຟລ໌ໃສ່
+              <code>.claude/skills/</code> ໃນໂປຣເຈັກ (ຫຼື
+              <code>~/.claude/skills/</code> ສຳລັບທຸກໂປຣເຈັກ) — skill
+              ຈະເຮັດວຽກອັດຕະໂນມັດເມື່ອສ້າງເອກະສານພາສາລາວ
+            </p>
+            <p class="en-sub">
+              Unzip into <code>.claude/skills/</code>; activates automatically
+              when generating Lao documents.
+            </p>
+            <a
+              class="btn ai-btn"
+              href="downloads/lao-docx-skill.zip"
+              data-umami-event="download-ai-skill"
+              download
+              >ດາວໂຫລດ Skill</a
+            >
+          </div>
+          <div class="ai-card">
+            <h3>Codex · Cursor · Copilot</h3>
+            <p>
+              ດາວໂຫລດ <code>AGENTS.md</code> ແລ້ວວາງໄວ້ຮາກຂອງໂປຣເຈັກ — coding
+              agent ສ່ວນຫຼາຍຈະອ່ານໄຟລ໌ນີ້ເອງອັດຕະໂນມັດ
+            </p>
+            <p class="en-sub">
+              Place <code>AGENTS.md</code> in your project root — most coding
+              agents read it automatically.
+            </p>
+            <a class="btn ai-btn" href="ai/AGENTS.md" download
+              >ດາວໂຫລດ AGENTS.md</a
+            >
+          </div>
+          <div class="ai-card">
+            <h3>ChatGPT / AI ໃດກໍໄດ້</h3>
+            <p>ວາງລິ້ງນີ້ໃສ່ໃນ prompt ຂອງທ່ານ ໃຫ້ AI ອ່ານກ່ອນສ້າງເອກະສານ:</p>
+            <div class="ai-url">
+              <code id="skillurl">https://phetsarath.mts.la/ai/SKILL.md</code
+              ><button id="copyurl" type="button" aria-label="Copy link">
+                📋 ກັອບປີ້
+              </button>
+            </div>
+            <p class="en-sub">
+              Paste this link into any AI chat prompt so it reads the rules
+              first.
+            </p>
+            <a class="btn ai-btn" href="ai/SKILL.md">ອ່ານຄູ່ມື SKILL.md</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="wrap">
+        <div class="sec-head">
+          <hr class="rule" />
+          <h2>ຄຳຖາມທີ່ພົບເລື້ອຍ</h2>
+          <p class="sub en">FAQ — from real user reports</p>
+        </div>
+        <div
+          class="fix-grid"
+          style="grid-template-columns: repeat(auto-fit, minmax(340px, 1fr))"
+        >
+          <div class="fix">
+            <h3>⚠️ ໃຊ້ Office 2010 / 2013 ຢູ່ບໍ? ກະລຸນາອ່ານກ່ອນ</h3>
+            <p class="new">
+              <b>ການຕັດຄຳລາວແມ່ນໜ້າທີ່ຂອງ Word ບໍ່ແມ່ນຂອງຟອນ</b> —
+              ຟອນທຸກຕົວໃນໂລກບໍ່ສາມາດບັງຄັບ Word ຮຸ່ນເກົ່າໃຫ້ຕັດຄຳໄດ້
+              ເພາະລະບົບຕັດຄຳຢູ່ໃນໂຕ Word ເອງ:
+            </p>
+            <p class="new">
+              ✅ <b>Microsoft 365 / 2021 / 2019 / 2016</b> — ຕັດຄຳລາວໄດ້ເອງ
+              (ເປີດພາສາລາວຕາມຄຳແນະນຳຂ້າງລຸ່ມ)<br />
+              ⚠️ <b>Word 2013 / 2010</b> — ລະບົບຕັດຄຳຮຸ່ນເກົ່າ (Uniscribe)
+              ຕັດຄຳລາວບໍ່ສະຖຽນ — ຟອນນີ້ໃສ່ຂໍ້ມູນຊ່ວຍໃຫ້ເຮັດວຽກໄດ້ດີສຸດແລ້ວ
+              (ແບບດຽວກັບຟອນ Saysettha) ແຕ່ບາງເຄື່ອງກໍຍັງບໍ່ຕັດ —
+              <b>ນີ້ບໍ່ແມ່ນຟອນເສຍ</b><br />
+              ❌ <b>Word 2007 ລົງໄປ</b> — ບໍ່ຮອງຮັບ
+            </p>
+            <p class="new">
+              ວິທີແກ້ສຳລັບ Word 2010/2013: ໃຊ້ມາໂຄຣ
+              <a
+                href="downloads/LaoWrapMacro.bas"
+                data-umami-event="download-wrap-macro"
+                ><b>LaoWrapMacro.bas</b></a
+              >
+              (ໃຊ້ໄດ້ທຸກຮຸ່ນ) — ສ່ວນ Add-in Lao Text Fixer ໃຊ້ໄດ້ສະເພາະ Word
+              2016 ຂຶ້ນໄປ. ຖ້າເປັນໄປໄດ້ ແນະນຳອັບເກຣດເປັນ Office 2016 ຂຶ້ນໄປ
+              ຈະຕັດຄຳໄດ້ທັນທີ
+            </p>
+            <p class="en-note">
+              Lao line breaking is done by Word's engine, not the font — no font
+              can force old Word to wrap. Word 2016+ wraps natively; Word
+              2010/2013 use the legacy Uniscribe engine and may still fail even
+              though this font ships the same compatibility metadata as the
+              Saysettha fonts. On 2010/2013 use the LaoWrapMacro (works on every
+              version); the add-in needs Word 2016+. Upgrading Office fixes it
+              outright.
+            </p>
+          </div>
+          <div class="fix">
+            <h3>Word ບໍ່ຕັດຄຳປະໂຫຍກຍາວ — ຂໍ້ຄວາມທັງກ້ອນຕົກລົງແຖວໃໝ່?</h3>
+            <p class="new">
+              Microsoft 365 ຮຸ່ນປັດຈຸບັນຕັດຄຳລາວໄດ້ເອງ ຫາກຂອງທ່ານບໍ່ຕັດ: ໄປທີ່
+              <b>File → Options → Language</b> ໃນສ່ວນ
+              <b>Office authoring languages and proofing</b> ກົດ
+              <b>Add a language…</b> ເລືອກ <b>ລາວ (Lao)</b> ແລ້ວປິດ-ເປີດ Word
+              ຄືນ ຈາກນັ້ນເລືອກຂໍ້ຄວາມລາວທັງໝົດ →
+              <b>Review → Language → Set Proofing Language → ລາວ</b>
+            </p>
+            <p class="new">
+              ໝາຍເຫດ: ຖ້າ Word ຂຽນວ່າ
+              <b>"Missing Proofing Tools — proofing is not available in Lao"</b>
+              ບໍ່ຕ້ອງກັງວົນ — ນັ້ນໝາຍເຖິງແຕ່ການກວດຄຳຜິດ (spell check) ເຊິ່ງ
+              Microsoft ຍັງບໍ່ມີສະບັບພາສາລາວ ສ່ວນ<b
+                >ການຕັດຄຳຂຶ້ນແຖວໃໝ່ຍັງເຮັດວຽກປົກກະຕິ</b
+              >
+              ເພາະເປັນຄົນລະລະບົບກັນ
+            </p>
+            <p class="new">
+              ໃນ <b>macOS</b>: ເລືອກຂໍ້ຄວາມລາວ → ເມນູ
+              <b>Tools → Language → ລາວ (Lao)</b> — ມາໂຄຣ LaoWrapMacro.bas
+              ໃຊ້ໄດ້ໃນ Word for Mac ເຊັ່ນກັນ
+            </p>
+            <p class="new">
+              ຖ້າຍັງບໍ່ຕັດ: ຕິດຕັ້ງ
+              <a href="./addin/index.html"><b>Lao Text Fixer</b></a> — Word
+              Add-in ຟຣີຂອງພວກເຮົາ (Windows / macOS / Word ໃນເວັບ, ບໍ່ແມ່ນມາໂຄຣ
+              ບໍ່ມີຄຳເຕືອນຄວາມປອດໄພ) ກົດປຸ່ມດຽວແກ້ໄຂທັງເອກະສານ ຫຼື ດາວໂຫລດ
+              <a
+                href="downloads/LaoWrapMacro.bas"
+                data-umami-event="download-wrap-macro"
+                >LaoWrapMacro.bas</a
+              >
+              ມາໂຄຣ VBA ສຳລັບເຄື່ອງທີ່ໃຊ້ອິນເຕີເນັດບໍ່ໄດ້
+            </p>
+            <p class="en-note">
+              Modern M365 wraps Lao natively; if not, add Lao under Office
+              authoring languages and proofing and tag the text via Review →
+              Language. The "Missing Proofing Tools" notice only means no Lao
+              spell-checker exists — wrapping is a separate engine and still
+              works. Otherwise install our free
+              <a href="./addin/index.html">Lao Text Fixer add-in</a>
+              (Windows/Mac/web, no macro warnings) or the VBA macro for offline
+              machines.
+            </p>
+          </div>
+          <div class="fix">
+            <h3>ສະຫຼະ ຳ ຫາຍ ຫຼື ແຍກເປັນ "ໍ າ" ເວລາແປງເປັນ PDF?</h3>
+            <p class="new">
+              ຕັ້ງແຕ່ v4.103 ຟອນໄດ້ຮັບການແກ້ໄຂໃຫ້ທົນທານຕໍ່ການແປງ PDF ຫຼາຍຂຶ້ນ
+              (ທຸກ glyph ມີລະຫັດ Unicode ຄົບ) — ກະລຸນາອັບເດດຟອນເປັນຮຸ່ນລ່າສຸດ
+            </p>
+            <p class="new">
+              ແນະນຳໃຫ້ໃຊ້ <b>File → Save As → PDF</b> ໃນ Word ຮຸ່ນໃໝ່ (ບໍ່ແມ່ນ
+              "Microsoft Print to PDF") ຜົນອອກມາຈະສະແດງ ຳ ຄົບຖ້ວນ
+            </p>
+            <p class="en-note">
+              v4.103 PUA-maps every glyph so PDF subsetters never drop the
+              am-ring. Note: copying Lao text OUT of any PDF is unreliable
+              industry-wide (engines decompose ຳ internally) — keep the .docx as
+              the editable source.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="support">
+      <div class="wrap">
+        <div class="sec-head" style="text-align: center">
+          <hr class="rule" style="margin: 0 auto 16px" />
+          <h2>ສະໜັບສະໜູນຜູ້ພັດທະນາ ☕</h2>
+          <p class="sub">Support the creator — buy me a coffee</p>
+        </div>
+        <div class="support-card">
+          <img
+            src="img/laoqr.png"
+            alt="LAO QR — ໂອນເງິນສະໜັບສະໜູນຜ່ານ LAPNet"
+            loading="lazy"
+          />
+          <p class="support-note">
+            ຟອນນີ້ແຈກຟຣີຕະຫຼອດໄປ ພາຍໃຕ້ໃບອະນຸຍາດ SIL OFL —
+            ຫາກຟອນນີ້ມີປະໂຫຍດຕໍ່ວຽກຂອງທ່ານ ແລະ ຢາກລ້ຽງກາເຟຜູ້ພັດທະນາ ສາມາດສະແກນ
+            <b>LAO QR</b> ດ້ວຍແອັບທະນາຄານຂອງທ່ານ (BCEL One, M-Money ຫຼື
+            ແອັບໃດກໍໄດ້ທີ່ຮອງຮັບ LAO QR)
+          </p>
+          <p class="support-note en">
+            This font is free forever under the SIL Open Font License. If it
+            helps your work, you can support the developer with any Lao banking
+            app that supports LAO QR. ຂອບໃຈຫຼາຍໆ 🙏
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap">
+        <p class="lao">
+          ເພັດຊະລາດ ໂອທີ v4.103 — ຟອນເສລີພາຍໃຕ້ SIL Open Font License
+        </p>
+        <p>
+          Copyright © 2012 Ministry of Posts and Telecommunications, Lao PDR
+          (phetsarath.gov.la). v4 family expansion, Office line-breaking fix and
+          mark-positioning work © 2026, released under the same OFL license.
+          Pali/Sanskrit/Kmhmu letters adapted from Noto Sans Lao Looped © The
+          Noto Project Authors (OFL 1.1). Line-breaking recipe informed by the
+          Saysettha fonts by Dr. John Durdin (laoscript.net).
+        </p>
+        <p>
+          <a
+            href="downloads/PhetsarathOT-v4.103.zip"
+            data-umami-event="download-font-zip"
+            >ດາວໂຫລດ · Download</a
+          >
+          · <a href="#support">ສະໜັບສະໜູນຜູ້ພັດທະນາ</a>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var area = document.getElementById("pgarea");
+        var bar = document.getElementById("pgbar");
+        var italic = false;
+        bar.addEventListener("click", function (e) {
+          var b = e.target.closest("button");
+          if (!b) return;
+          if (b.dataset.i) {
+            italic = !italic;
+            b.setAttribute("aria-pressed", italic ? "true" : "false");
+            area.style.fontStyle = italic ? "italic" : "normal";
+          } else {
+            bar.querySelectorAll("button[data-w]").forEach(function (x) {
+              x.setAttribute("aria-pressed", "false");
+            });
+            b.setAttribute("aria-pressed", "true");
+            area.style.fontWeight = b.dataset.w;
+          }
+        });
+        var size = document.getElementById("pgsize");
+        var sizeval = document.getElementById("pgsizeval");
+        size.addEventListener("input", function () {
+          area.style.fontSize = size.value + "px";
+          sizeval.textContent = size.value + "px";
+        });
+        document.querySelectorAll(".pg-samples button").forEach(function (b) {
+          b.addEventListener("click", function () {
+            area.textContent = b.dataset.t;
+          });
+        });
+        var copyBtn = document.getElementById("copyurl");
+        if (copyBtn) {
+          copyBtn.addEventListener("click", function () {
+            navigator.clipboard
+              .writeText(document.getElementById("skillurl").textContent)
+              .then(function () {
+                copyBtn.textContent = "✓ ກັອບປີ້ແລ້ວ";
+                setTimeout(function () {
+                  copyBtn.textContent = "📋 ກັອບປີ້";
+                }, 1800);
+              });
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>

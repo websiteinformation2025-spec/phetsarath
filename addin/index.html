@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="lo">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lao Text Fixer — Word Add-in · Phetsarath OT</title>
+    <meta
+      name="description"
+      content="Free Word add-in that fixes Lao line wrapping on Windows, macOS and Word on the web. From phetsarath.mts.la."
+    />
+    <link rel="stylesheet" href="../fonts/phetsarath.css" />
+    <link rel="icon" href="icon-32.png" />
+    <style>
+      :root {
+        --navy: #0a2451;
+        --navy-deep: #071a3c;
+        --red: #be2338;
+        --ink: #1c2433;
+        --muted: #5b6577;
+        --line: #e3e7ef;
+        --bg: #f7f8fb;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      body {
+        font-family: "Phetsarath OT", "Segoe UI", system-ui, sans-serif;
+        color: var(--ink);
+        background: var(--bg);
+        line-height: 1.9;
+        font-size: 15.5px;
+      }
+      .wrap {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      header {
+        background: linear-gradient(
+          168deg,
+          var(--navy) 0%,
+          var(--navy-deep) 100%
+        );
+        color: #f2f4f9;
+        padding: 44px 0 40px;
+      }
+      header img {
+        width: 64px;
+        height: 64px;
+        border-radius: 14px;
+        margin-bottom: 14px;
+      }
+      h1 {
+        font-size: clamp(24px, 4vw, 32px);
+        line-height: 1.5;
+      }
+      .en {
+        font-family: "Segoe UI", system-ui, sans-serif;
+        font-size: 13px;
+        color: var(--muted);
+      }
+      header .en {
+        color: #9da9c4;
+      }
+      main {
+        padding: 36px 0 56px;
+      }
+      section {
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 22px 24px;
+        margin-bottom: 18px;
+      }
+      h2 {
+        color: var(--navy);
+        font-size: 19px;
+        margin-bottom: 8px;
+      }
+      h3 {
+        color: var(--navy);
+        font-size: 16px;
+        margin: 16px 0 4px;
+      }
+      ol,
+      ul {
+        padding-left: 22px;
+      }
+      li {
+        margin: 4px 0;
+      }
+      code,
+      .path {
+        font-family: Consolas, Menlo, monospace;
+        font-size: 12.5px;
+        background: var(--bg);
+        border: 1px solid var(--line);
+        border-radius: 4px;
+        padding: 1px 6px;
+        word-break: break-all;
+      }
+      .btn {
+        display: inline-block;
+        background: var(--red);
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 22px;
+        border-radius: 8px;
+        font-size: 15px;
+        margin: 8px 8px 0 0;
+      }
+      .btn.alt {
+        background: var(--navy);
+      }
+      .note {
+        font-size: 13.5px;
+        color: var(--muted);
+      }
+      a {
+        color: var(--navy);
+      }
+      footer {
+        padding: 0 0 40px;
+        text-align: center;
+        font-size: 13px;
+        color: var(--muted);
+        font-family: "Segoe UI", system-ui, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <img src="icon-80.png" alt="" />
+        <h1>ຕົວແກ້ໄຂການຕັດຄຳລາວ ສຳລັບ Microsoft Word</h1>
+        <p class="en">
+          Lao Text Fixer — a free Word add-in for Windows, macOS and Word on the
+          web. No macros, no installers: it runs in Word's built-in add-in
+          system.
+        </p>
+      </div>
+    </header>
+    <main>
+      <div class="wrap">
+        <section>
+          <h2>ມັນເຮັດຫຍັງ?</h2>
+          <p>
+            ແກ້ໄຂບັນຫາ Word ບໍ່ຕັດຄຳລາວຂຶ້ນແຖວໃໝ່: ກົດປຸ່ມດຽວ
+            ມັນຈະໝາຍຂໍ້ຄວາມລາວເປັນ complex script (ວິທີແກ້ທີ່ຖືກຕ້ອງ) ແລະ
+            ສາມາດເພີ່ມ/ລຶບຈຸດຕັດຄຳທີ່ເບິ່ງບໍ່ເຫັນ (ZWSP) ສຳລັບ Word ຮຸ່ນເກົ່າ.
+            ຂໍ້ຄວາມຂອງທ່ານບໍ່ອອກຈາກເຄື່ອງ — ທຸກຢ່າງເຮັດວຽກ ພາຍໃນ Word ເທົ່ານັ້ນ.
+          </p>
+          <p class="en">
+            One click tags Lao runs with the complex-script properties Word's
+            Lao word-break engine needs, and can insert/remove invisible
+            syllable break points for old Word versions. Your text never leaves
+            your machine. Free under the SIL OFL — same engine logic as our
+            <a href="../downloads/LaoWrapMacro.bas">VBA macro</a>, without the
+            macro-security warnings.
+          </p>
+          <p>
+            <a
+              class="btn"
+              href="manifest.xml"
+              download
+              data-umami-event="download-addin-manifest"
+              >ດາວໂຫລດ manifest.xml</a
+            >
+            <a class="btn alt" href="../index.html">ກັບໄປໜ້າຟອນ</a>
+          </p>
+        </section>
+
+        <section>
+          <h2>ວິທີຕິດຕັ້ງ · How to install</h2>
+
+          <h3>ອົງກອນ / ຫ້ອງການ (ແນະນຳ) — Microsoft 365 admin</h3>
+          <p class="en">
+            Best for offices: an admin deploys it once to everyone (Windows, Mac
+            and web at the same time).
+          </p>
+          <ol>
+            <li>
+              Microsoft 365 admin center → <b>Settings → Integrated apps</b>
+            </li>
+            <li>
+              <b>Upload custom apps</b> → Office Add-in →
+              <b>Provide link to manifest file</b>
+            </li>
+            <li>
+              ວາງລິ້ງ:
+              <span class="path"
+                >https://phetsarath.mts.la/addin/manifest.xml</span
+              >
+            </li>
+            <li>
+              ເລືອກຜູ້ໃຊ້ → Deploy — ປຸ່ມ <b>Lao Fixer</b> ຈະປາກົດໃນແຖບ Home ຂອງ
+              Word
+            </li>
+          </ol>
+
+          <h3>Word ໃນເວັບ (ທົດລອງໄວທີ່ສຸດ) — Word on the web</h3>
+          <ol>
+            <li>
+              ເປີດເອກະສານໃນ
+              <a href="https://word.new" target="_blank">Word on the web</a>
+            </li>
+            <li><b>Insert → Add-ins → Upload My Add-in</b></li>
+            <li>ເລືອກໄຟລ໌ <b>manifest.xml</b> ທີ່ດາວໂຫລດຈາກປຸ່ມຂ້າງເທິງ</li>
+          </ol>
+
+          <h3>macOS (Word for Mac)</h3>
+          <ol>
+            <li>
+              ດາວໂຫລດ manifest.xml ແລ້ວ copy ໄປທີ່:<br />
+              <span class="path"
+                >~/Library/Containers/com.microsoft.Word/Data/Documents/wef</span
+              ><br />
+              <span class="note"
+                >(ຖ້າໂຟນເດີ wef ບໍ່ມີ ໃຫ້ສ້າງເອງ — Finder → Go → Go to
+                Folder…)</span
+              >
+            </li>
+            <li>ປິດ-ເປີດ Word ຄືນ</li>
+            <li>
+              <b
+                >Insert → Add-ins ▼ (ລູກສອນລົງ) → Developer Add-ins → Lao Text
+                Fixer</b
+              >
+            </li>
+          </ol>
+
+          <h3>Windows (ບໍ່ມີ admin — shared folder)</h3>
+          <ol>
+            <li>
+              ສ້າງໂຟນເດີ ເຊັ່ນ <span class="path">C:\addins</span> ແລ້ວວາງ
+              manifest.xml ໃສ່
+            </li>
+            <li>
+              ແຊໂຟນເດີ: ຄລິກຂວາ → Properties → Sharing → Share (ກັບຕົວເອງກໍໄດ້)
+              ຈື່ network path ເຊັ່ນ <span class="path">\\YourPC\addins</span>
+            </li>
+            <li>
+              Word →
+              <b
+                >File → Options → Trust Center → Trust Center Settings → Trusted
+                Add-in Catalogs</b
+              >
+              → ວາງ path → Add catalog → ຕິກ <b>Show in Menu</b> → OK → ປິດ-ເປີດ
+              Word
+            </li>
+            <li><b>Insert → My Add-ins → SHARED FOLDER → Lao Text Fixer</b></li>
+          </ol>
+
+          <p class="note">
+            ໃນອະນາຄົດພວກເຮົາວາງແຜນສົ່ງເຂົ້າ Microsoft AppSource
+            ເພື່ອໃຫ້ຕິດຕັ້ງໄດ້ຈາກ store ໃນ Word ໂດຍກົງ · An AppSource listing is
+            planned so it can be installed from Word's built-in store with one
+            click.
+          </p>
+        </section>
+
+        <section>
+          <h2>ຄວາມປອດໄພ · Security</h2>
+          <p class="en">
+            This is an Office Add-in, not a macro: it runs sandboxed in Word's
+            add-in runtime, can only touch the open document, cannot access your
+            files or system, and shows no security warnings. The complete source
+            is readable at <a href="taskpane.html">taskpane.html</a> and
+            <a href="laofix.js">laofix.js</a>.
+          </p>
+          <p>
+            ນີ້ແມ່ນ Office Add-in ບໍ່ແມ່ນມາໂຄຣ: ມັນເຮັດວຽກໃນລະບົບ add-in ຂອງ
+            Word ໂດຍກົງ ເຂົ້າເຖິງໄດ້ແຕ່ເອກະສານທີ່ເປີດຢູ່ເທົ່ານັ້ນ
+            ບໍ່ສາມາດເຂົ້າເຖິງໄຟລ໌ ຫຼື ລະບົບຂອງທ່ານ ແລະ ບໍ່ມີຄຳເຕືອນຄວາມປອດໄພ.
+            ໂຄດທັງໝົດເປີດເຜີຍໃຫ້ອ່ານໄດ້.
+          </p>
+        </section>
+      </div>
+    </main>
+    <footer>
+      Lao Text Fixer · SIL OFL · <a href="../index.html">Phetsarath OT</a>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+           xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
+           xsi:type="TaskPaneApp">
+  <Id>D208C4FD-D93C-42FD-97B2-E32C3D5FA893</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>MTS Lao</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="Lao Text Fixer"/>
+  <Description DefaultValue="Fix Lao line wrapping in Word: tags Lao text as complex script so Word wraps at word boundaries, and can insert/remove invisible syllable break points (ZWSP) for older Word versions. Free (SIL OFL) from phetsarath.mts.la."/>
+  <IconUrl DefaultValue="https://phetsarath.mts.la/addin/icon-32.png"/>
+  <HighResolutionIconUrl DefaultValue="https://phetsarath.mts.la/addin/icon-80.png"/>
+  <SupportUrl DefaultValue="https://phetsarath.mts.la/"/>
+  <AppDomains>
+    <AppDomain>https://phetsarath.mts.la</AppDomain>
+  </AppDomains>
+  <Hosts>
+    <Host Name="Document"/>
+  </Hosts>
+  <Requirements>
+    <Sets DefaultMinVersion="1.1">
+      <Set Name="WordApi" MinVersion="1.1"/>
+    </Sets>
+  </Requirements>
+  <DefaultSettings>
+    <SourceLocation DefaultValue="https://phetsarath.mts.la/addin/taskpane.html"/>
+  </DefaultSettings>
+  <Permissions>ReadWriteDocument</Permissions>
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
+    <Hosts>
+      <Host xsi:type="Document">
+        <DesktopFormFactor>
+          <GetStarted>
+            <Title resid="GetStarted.Title"/>
+            <Description resid="GetStarted.Description"/>
+            <LearnMoreUrl resid="Url.Site"/>
+          </GetStarted>
+          <ExtensionPoint xsi:type="PrimaryCommandSurface">
+            <OfficeTab id="TabHome">
+              <Group id="LaoFixer.Group">
+                <Label resid="Group.Label"/>
+                <Icon>
+                  <bt:Image size="16" resid="Icon.16"/>
+                  <bt:Image size="32" resid="Icon.32"/>
+                  <bt:Image size="80" resid="Icon.80"/>
+                </Icon>
+                <Control xsi:type="Button" id="LaoFixer.TaskpaneButton">
+                  <Label resid="Button.Label"/>
+                  <Supertip>
+                    <Title resid="Button.Label"/>
+                    <Description resid="Button.Tip"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="Icon.16"/>
+                    <bt:Image size="32" resid="Icon.32"/>
+                    <bt:Image size="80" resid="Icon.80"/>
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <TaskpaneId>LaoFixer.Taskpane</TaskpaneId>
+                    <SourceLocation resid="Url.Taskpane"/>
+                  </Action>
+                </Control>
+              </Group>
+            </OfficeTab>
+          </ExtensionPoint>
+        </DesktopFormFactor>
+      </Host>
+    </Hosts>
+    <Resources>
+      <bt:Images>
+        <bt:Image id="Icon.16" DefaultValue="https://phetsarath.mts.la/addin/icon-16.png"/>
+        <bt:Image id="Icon.32" DefaultValue="https://phetsarath.mts.la/addin/icon-32.png"/>
+        <bt:Image id="Icon.80" DefaultValue="https://phetsarath.mts.la/addin/icon-80.png"/>
+      </bt:Images>
+      <bt:Urls>
+        <bt:Url id="Url.Taskpane" DefaultValue="https://phetsarath.mts.la/addin/taskpane.html"/>
+        <bt:Url id="Url.Site" DefaultValue="https://phetsarath.mts.la/"/>
+      </bt:Urls>
+      <bt:ShortStrings>
+        <bt:String id="Group.Label" DefaultValue="Lao Text"/>
+        <bt:String id="Button.Label" DefaultValue="ຕັດຄຳລາວ Lao Fixer"/>
+        <bt:String id="GetStarted.Title" DefaultValue="Lao Text Fixer installed"/>
+      </bt:ShortStrings>
+      <bt:LongStrings>
+        <bt:String id="Button.Tip" DefaultValue="Fix Lao line wrapping: tag Lao text as complex script, or insert/remove invisible break points."/>
+        <bt:String id="GetStarted.Description" DefaultValue="Open the Home tab and click 'Lao Fixer' to fix Lao line wrapping in this document."/>
+      </bt:LongStrings>
+    </Resources>
+  </VersionOverrides>
+</OfficeApp>

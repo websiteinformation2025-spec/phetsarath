@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="lo">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lao Text Fixer</title>
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+    <script src="laofix.js"></script>
+    <link rel="stylesheet" href="../fonts/phetsarath.css" />
+    <style>
+      :root {
+        --navy: #0a2451;
+        --red: #be2338;
+        --ink: #1c2433;
+        --muted: #5b6577;
+        --line: #e3e7ef;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      body {
+        font-family: "Phetsarath OT", "Segoe UI", system-ui, sans-serif;
+        color: var(--ink);
+        background: #fff;
+        padding: 16px 14px 24px;
+        font-size: 14px;
+        line-height: 1.8;
+      }
+      h1 {
+        font-size: 16px;
+        color: var(--navy);
+        margin-bottom: 2px;
+      }
+      .en {
+        font-family: "Segoe UI", system-ui, sans-serif;
+        font-size: 11.5px;
+        color: var(--muted);
+      }
+      .card {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 12px;
+        margin-top: 14px;
+      }
+      .card h2 {
+        font-size: 14px;
+        color: var(--navy);
+        margin-bottom: 6px;
+      }
+      label.opt {
+        display: flex;
+        gap: 8px;
+        align-items: flex-start;
+        margin: 8px 0;
+        cursor: pointer;
+      }
+      label.opt input {
+        margin-top: 5px;
+      }
+      label.opt .d {
+        font-size: 12px;
+        color: var(--muted);
+        display: block;
+      }
+      button {
+        font-family: inherit;
+        font-size: 14px;
+        width: 100%;
+        padding: 10px 12px;
+        margin-top: 10px;
+        border: 0;
+        border-radius: 7px;
+        cursor: pointer;
+      }
+      #fixBtn {
+        background: var(--navy);
+        color: #fff;
+      }
+      #removeBtn {
+        background: #fff;
+        color: var(--red);
+        border: 1.5px solid var(--red);
+      }
+      button:disabled {
+        opacity: 0.5;
+        cursor: default;
+      }
+      #status {
+        margin-top: 12px;
+        font-size: 13px;
+        min-height: 2em;
+      }
+      #status.ok {
+        color: #1b7a3d;
+      }
+      #status.err {
+        color: var(--red);
+      }
+      .scope {
+        font-size: 12px;
+        color: var(--muted);
+        margin-top: 8px;
+      }
+      .foot {
+        margin-top: 18px;
+        font-size: 11px;
+        color: var(--muted);
+        font-family: "Segoe UI", system-ui, sans-serif;
+      }
+      .foot a {
+        color: var(--navy);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ຕົວແກ້ໄຂການຕັດຄຳລາວ</h1>
+    <p class="en">Lao Text Fixer — phetsarath.mts.la</p>
+
+    <div class="card">
+      <h2>ແກ້ໄຂການຕັດຄຳ</h2>
+      <label class="opt">
+        <input type="checkbox" id="optTag" checked />
+        <span
+          >ໝາຍຂໍ້ຄວາມລາວເປັນ complex script (ແນະນຳ)
+          <span class="d"
+            >Tag Lao runs with the complex-script flags Word needs to wrap at
+            word boundaries — the proper fix.</span
+          ></span
+        >
+      </label>
+      <label class="opt">
+        <input type="checkbox" id="optZwsp" />
+        <span
+          >ເພີ່ມຈຸດຕັດຄຳທີ່ເບິ່ງບໍ່ເຫັນ (ZWSP) — ສຳລັບ Word ຮຸ່ນເກົ່າ
+          <span class="d"
+            >Insert invisible break points at syllable boundaries. Only needed
+            if tagging alone does not help (old Word versions).</span
+          ></span
+        >
+      </label>
+      <button id="fixBtn">ແກ້ໄຂ · Fix</button>
+      <button id="removeBtn">ລຶບຈຸດຕັດຄຳ ZWSP ອອກ · Remove ZWSP</button>
+      <p class="scope">
+        ຂອບເຂດ: ຂໍ້ຄວາມທີ່ເລືອກ ຫຼື ທັງເອກະສານຖ້າບໍ່ໄດ້ເລືອກ · Applies to the
+        selection, or the whole document if nothing is selected. Undo with
+        Ctrl+Z / ⌘Z.
+      </p>
+      <div id="status" role="status"></div>
+    </div>
+
+    <p class="foot">
+      ຟຣີພາຍໃຕ້ SIL OFL — <a href="../" target="_blank">Phetsarath OT</a>.
+      ຂໍ້ຄວາມຂອງທ່ານບໍ່ຖືກສົ່ງອອກຈາກເຄື່ອງ — ທຸກຢ່າງເຮັດວຽກໃນ Word ເທົ່ານັ້ນ ·
+      Your text never leaves Word; all processing is local.
+    </p>
+
+    <script>
+      (function () {
+        "use strict";
+        var statusEl, fixBtn, removeBtn;
+
+        function status(msg, cls) {
+          statusEl.textContent = msg;
+          statusEl.className = cls || "";
+        }
+        function busy(b) {
+          fixBtn.disabled = b;
+          removeBtn.disabled = b;
+        }
+
+        function run(opts, doneMsg) {
+          busy(true);
+          status("ກຳລັງເຮັດວຽກ… · Working…");
+          Word.run(function (ctx) {
+            var sel = ctx.document.getSelection();
+            sel.load("text");
+            return ctx.sync().then(function () {
+              var useSel =
+                sel.text && sel.text.replace(/[\s​]+/g, "").length > 0;
+              var target = useSel ? sel : ctx.document.body.getRange();
+              var ooxml = target.getOoxml();
+              return ctx.sync().then(function () {
+                var res = LaoFix.transform(ooxml.value, opts);
+                var st = res.stats;
+                if (
+                  st.runsTagged === 0 &&
+                  st.zwspInserted === 0 &&
+                  st.zwspRemoved === 0
+                ) {
+                  busy(false);
+                  status(
+                    "ບໍ່ພົບຂໍ້ຄວາມທີ່ຕ້ອງແກ້ໄຂ · Nothing to change" +
+                      (useSel ? "" : " (document had no untreated Lao text)"),
+                    "ok",
+                  );
+                  return;
+                }
+                target.insertOoxml(res.xml, Word.InsertLocation.replace);
+                return ctx.sync().then(function () {
+                  busy(false);
+                  status(
+                    doneMsg(st) +
+                      (useSel ? " (ຂໍ້ຄວາມທີ່ເລືອກ)" : " (ທັງເອກະສານ)"),
+                    "ok",
+                  );
+                });
+              });
+            });
+          }).catch(function (e) {
+            busy(false);
+            status(
+              "ຜິດພາດ · Error: " + (e && e.message ? e.message : e),
+              "err",
+            );
+          });
+        }
+
+        function onFix() {
+          var opts = {
+            tagRuns: document.getElementById("optTag").checked,
+            zwsp: document.getElementById("optZwsp").checked,
+          };
+          if (!opts.tagRuns && !opts.zwsp) {
+            status(
+              "ກະລຸນາເລືອກຢ່າງໜ້ອຍໜຶ່ງທາງເລືອກ · Choose at least one option",
+              "err",
+            );
+            return;
+          }
+          run(opts, function (st) {
+            var parts = [];
+            if (st.runsTagged)
+              parts.push("ໝາຍ " + st.runsTagged + " ຊ່ວງຂໍ້ຄວາມ");
+            if (st.zwspInserted)
+              parts.push("ເພີ່ມ " + st.zwspInserted + " ຈຸດຕັດຄຳ");
+            return "ສຳເລັດ! " + parts.join(", ");
+          });
+        }
+
+        function onRemove() {
+          run({ removeZwsp: true }, function (st) {
+            return "ລຶບ " + st.zwspRemoved + " ຈຸດຕັດຄຳອອກແລ້ວ";
+          });
+        }
+
+        Office.onReady(function (info) {
+          statusEl = document.getElementById("status");
+          fixBtn = document.getElementById("fixBtn");
+          removeBtn = document.getElementById("removeBtn");
+          if (info.host !== Office.HostType.Word) {
+            busy(true);
+            status(
+              "ເຄື່ອງມືນີ້ໃຊ້ໄດ້ໃນ Microsoft Word ເທົ່ານັ້ນ · Word only",
+              "err",
+            );
+            return;
+          }
+          fixBtn.onclick = onFix;
+          removeBtn.onclick = onRemove;
+        });
+      })();
+    </script>
+  </body>
+</html>
